@@ -119,13 +119,16 @@ public class Responder
             System.err.println("A problem was encountered reading " +
                                FILE_OF_MAPPED_RESPONSES);
         }
-        // Make sure we have at least one response.
+        // Make sure we have at least one canned response.
         if(responseMap.size() == 0) {
             responseMap.put("bluej", 
                         "Ahhh, BlueJ, yes. We tried to buy out those guys long ago, but\n" +
                         "they simply won't sell... Stubborn people they are. Nothing we can\n" +
                         "do about it, I'm afraid.");
         }
+        
+        // Have a canned response for empty statements
+        responseMap.put("", "Are you still there??");
     }
 
     /**
