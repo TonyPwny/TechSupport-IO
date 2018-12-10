@@ -124,10 +124,34 @@ public class Responder
         Charset charset = Charset.forName("US-ASCII");
         Path path = Paths.get(FILE_OF_DEFAULT_RESPONSES);
         try (BufferedReader reader = Files.newBufferedReader(path, charset)) {
-            String response = reader.readLine();
-            while(response != null) {
-                defaultResponses.add(response);
-                response = reader.readLine();
+            
+            String buffer = reader.readLine();
+            String nextLine = buffer;
+            String response = null;
+            
+            while(nextLine != null) {
+                
+                if(nextLine.equals("\n") || nextLine.equals("")) {
+                    
+                    defaultResponses.add(response);
+                    response = null;
+                }
+                else if(response == null && !nextLine.equals("\n") && !nextLine.equals("")) {
+                    
+                    response = nextLine;
+                }
+                else {
+                    
+                    response = response + "\n" + nextLine;
+                }
+                
+                buffer = reader.readLine();
+                
+                if(buffer == null) {
+                    
+                    defaultResponses.add(response);
+                }
+                nextLine = buffer;
             }
         }
         catch(FileNotFoundException e) {
