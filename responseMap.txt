@@ -32,6 +32,11 @@ This is a known bug to do with the Windows operating system.
 Please report it to Microsoft.
 There is nothing we can do about this.
 
+microsoft
+This is a known bug to do with the Microsoft software.
+Please report it to Microsoft.
+There is nothing we can do about this.
+
 macintosh
 This is a known bug to do with the Mac operating system.
 Please report it to Apple.
@@ -47,7 +52,8 @@ We have tons of wizards that do all the work for you.
 Have you read the installation instructions?
 
 memory
-If you read the system requirements carefully, you will see that the specified memory requirements are 1.5 giga byte.
+If you read the system requirements carefully,
+you will see the memory requirements are 1.5 gigabytes.
 You really should upgrade your memory.
 Anything else you want to know?
 
@@ -59,6 +65,7 @@ Can you be a bit more precise?
 
 bluej
 Ahhh, BlueJ, yes.
-We tried to buy out those guys long ago, but they simply won't sell...
+We tried to buy out those guys long ago,
+but they simply won't sell...
 Stubborn people they are.
 Nothing we can do about it, I'm afraid.
