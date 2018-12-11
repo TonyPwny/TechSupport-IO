@@ -147,7 +147,7 @@ public class Responder
             
             while(nextLine != null) {
                 
-                if(nextLine.equals("\n") || nextLine.equals("")) {
+                if(response != null && (nextLine.equals("\n") || nextLine.equals(""))) {
                     
                     defaultResponses.add(response);
                     response = null;
@@ -156,14 +156,14 @@ public class Responder
                     
                     response = nextLine;
                 }
-                else {
+                else if(response != null && !nextLine.equals("\n") && !nextLine.equals("")) {
                     
                     response = response + "\n" + nextLine;
                 }
                 
                 buffer = reader.readLine();
                 
-                if(buffer == null) {
+                if(response != null && buffer == null) {
                     
                     defaultResponses.add(response);
                 }
